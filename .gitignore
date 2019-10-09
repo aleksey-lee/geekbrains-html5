@@ -1,0 +1,7 @@
+node_modules/
+maket/
+*.txt
+*.zip
+package-lock.json
+*.lock
+*.phar
