@@ -1,0 +1,8 @@
+node_modules/
+maket/
+public/PHPMailer
+*.txt
+*.zip
+package-lock.json
+*.lock
+*.phar
