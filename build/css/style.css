@@ -2,8 +2,15 @@ body{
   font-family: Arial;
 }
 
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 p, ul{
-  margin-bottom: 11px;
+  margin: 0 0 11px;
+  padding: 0;
   line-height: 1.55;
 }
 
@@ -19,12 +26,20 @@ p, ul{
   clear: both;
 }
 
+.bg-dark{
+  background-color: #445161;
+  color: #fff;
+}
+
+.bg-dark .title-2{
+  color: inherit;
+}
+
 .main-header {
   width: 100%;
   min-height: 323px;
   padding: 50px 50px 44px 44px;
   box-sizing: border-box;
-  background-color: #445161;
 }
 
 .main-header-wrapper {
@@ -33,26 +48,17 @@ p, ul{
 
 .main-header-title {
   margin: 0;
-  font-family: Arial;
-  color:  #ffffff;
   font-size: 60px;
   font-weight: 400;
-  text-align: left;
   line-height: .7;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
 }
 
-.color-txt {
-  color: red;
-}
-
 .main-header-list {
   margin: 42px 0 0 42px;
+  padding: 0;
   list-style-type: none;
-  font-family: Arial;
-  color:  #ffffff;
   font-size: 20px;
-  font-weight: 400;
   line-height: 36px;
   text-align: left;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
@@ -87,10 +93,12 @@ p, ul{
 }
 
 .title-2{
-  margin-bottom: 30px;
+  margin: 0 0 30px;
+  width: 100%;
   font-size: 30px;
   color: #445161;
   line-height: .7;
+  font-weight: 400;
 }
 
 .text-center{
@@ -158,7 +166,7 @@ p, ul{
 .screenshots-figure{
   float: left;
   width: 50%;
-  margin-bottom: 13px;
+  margin: 0 0 13px;
 }
 
 .screenshots-figure img{
@@ -174,7 +182,8 @@ p, ul{
 .screenshots-header{
   font-size: 24px;
   color: #445161;
-  margin-bottom: 8px;
+  font-weight: 400;
+  margin: 0 0 8px;
 }
 
 
@@ -282,6 +291,8 @@ p, ul{
 .buy-card-name{
   padding: 10px 10px 13px;
   font-size: 24px;
+  margin: 0;
+  font-weight: 400;
 }
 
 .buy-card-price{
@@ -293,7 +304,7 @@ p, ul{
 
 .buy-card-list{
   text-align: left;
-  margin-left: 20px;
+  margin: 0 0 0 20px;
   padding: 20px 15px 11px 15px;
   font-size: 14px;
 }
@@ -315,8 +326,138 @@ p, ul{
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #445161;
+  cursor: pointer;
+  transition: .3s;
 }
 
-.buy-card-btn:hover{
+.buy-card-btn:hover, .buy-card-btn:active{
   background: #989898;
+  color: #fff;
+  outline: none;
+}
+
+.contacts{
+  padding: 54px 48px 47px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: #445161;
+  color: #fff;
+}
+
+.contacts-form{
+  max-width: 500px;
+  text-align: center;
+}
+
+.contacts-input,.contacts-area{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 0;
+  outline: none;
+  padding: 13px 11px 10px;
+  color: #445161;
+  border-radius: 5px;
+}
+
+.contacts-input,.contacts-area::placeholder{
+  color: #445161;
+}
+
+.contacts-area{
+  height: 170px;
+  resize: none;
+}
+
+.contacts-submit{
+  display: inline-block;
+  width: 140px;
+  height: 40px;
+  background: #fff;
+  border: 0;
+  color: #445161;
+  font-size: 16px;
+  transition: .3s;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contacts-submit:hover, .contacts-submit:active{
+  background: #989898;
+  color: #fff;
+}
+
+.contacts-calls{
+  width: 242px;
+  margin: 0 0 0 46px;
+}
+
+.contacts-box{
+  margin-bottom: 20px;
+}
+
+.contacts-link{
+  display: inline-block;
+  font-size: 16px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contacts-link:hover{
+  color: #989898;
+}
+
+.contacts-link img{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.socials{
+  margin: 30px -1px 0;
+}
+
+.socials-link{
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.socials-icon{
+  display: inline-block;
+  width: 43px;
+  height: 42px;
+  background-image: url(../img/social-buttons.png);
+}
+
+.socials-twitter{
+  background-position: -1px 0;
+}
+
+.socials-facebook{
+  background-position: -50px 0;
+}
+
+.socials-in{
+  background-position: -99px 0;
+}
+
+.socials-google{
+  background-position: -149px 0;
+}
+
+.socials-youtube{
+  background-position: -197px 0;
+}
+
+.subfooter{
+  padding: 10px 48px;
+  font-size: 12px;
+  color: #445161;
 }
